@@ -93,4 +93,11 @@ public interface SysUserMapper {
      * @mbggenerated Mon Jun 08 20:39:48 JST 2020
      */
     int updateByPrimaryKey(SysUser record);
+    
+    /**
+     * Custom method for test
+     * findAll
+     * @return
+     */
+    List<SysUser> findAll();
 }
