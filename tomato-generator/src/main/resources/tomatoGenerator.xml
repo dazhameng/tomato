@@ -37,6 +37,15 @@
 
     <table tableName="sys_config" />
     <table tableName="sys_dept" />
+    <table tableName="sys_dict"></table>
+    <table tableName="sys_log"></table>
+    <table tableName="sys_login_log"></table>
+    <table tableName="sys_menu"></table>
+    <table tableName="sys_role"></table>
+    <table tableName="sys_role_dept"></table>
+    <table tableName="sys_role_menu"></table>
+    <table tableName="sys_user"></table>
+    <table tableName="sys_user_role"></table>
 
     <!-- <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
       <property name="useActualColumnNames" value="true"/>
