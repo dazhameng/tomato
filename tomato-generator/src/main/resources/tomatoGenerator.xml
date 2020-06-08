@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
+
+  <context id="TomaToTables" targetRuntime="MyBatis3">
+  	<!-- <jdbcConnection driverClass="${jdbc.driver}"
+        connectionURL="${db.url}"
+        userId="${db.username}"
+        password="${db.password}">
+    </jdbcConnection> -->
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8"
+        userId="root"
+        password="mysql1234">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.dzm.tomatoadmin.model" targetProject="src/main/java">
+      <!-- <property name="enableSubPackages" value="true" /> -->
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="com.dzm.tomatoadmin.model" targetProject="src/main/java">
+      <!-- <property name="enableSubPackages" value="true" /> -->
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.dzm.tomatoadmin.model" targetProject="src/main/java">
+      <!-- <property name="enableSubPackages" value="true" /> -->
+    </javaClientGenerator>
+
+    <table tableName="sys_config" >
+        <generatedKey column="id" sqlStatement="MySql" identity="true" />
+        <property name="value"/>
+    </table>
+    <table tableName="sys_dept" >
+        <generatedKey column="id" sqlStatement="MySql" identity="true" />
+    </table>
+
+    <!-- <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+      <columnOverride column="DATE_FIELD" property="startDate" />
+      <ignoreColumn column="FRED" />
+      <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+    </table> -->
+    <!-- java -jar mybatis-generator-core-1.3.2.jar -configfile /Users/zhangwenxin/github-workspace/tomato/tomatoGenerator.xml -overwrite -->
+  </context>
+</generatorConfiguration>
