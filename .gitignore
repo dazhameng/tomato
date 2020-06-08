@@ -1,7 +1,4 @@
- # .gitignore_global
- ####################################
- ######## OS generated files ########
- ####################################
+# mac os
  .DS_Store
  .DS_Store?
 
