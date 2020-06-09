@@ -8,18 +8,18 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8
     username: root
     password: mysql1234
-    druid:
-        filters: stat,wall,log4j,config
-        maxActive: 100
-        initialSize: 1
-        maxWait: 60000
-        minIdle: 1
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: select 'x'
-        test-whileidle: true
-        test-on-borrow: false
-        test-on-return: false
-        pool-prepared-statements: true
-        max-open-prepared-statements: 50
-        max-pool-prepared-statement-per-connection-size: 20
+#    druid
+    filters: stat,wall,log4j,config
+    maxActive: 100
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    test-whileidle: true
+    test-on-borrow: false
+    test-on-return: false
+    pool-prepared-statements: true
+    max-open-prepared-statements: 50
+    max-pool-prepared-statement-per-connection-size: 20
