@@ -19,5 +19,10 @@ public class SysUserServiceImpl implements SysUserService{
 	public List<SysUser> findAll() {
 		return SysUserMapper.findAll();
 	}
+
+	@Override
+	public SysUser selectByPrimaryKey(long id) {
+		return SysUserMapper.selectByPrimaryKey(id);
+	}
 	
 }

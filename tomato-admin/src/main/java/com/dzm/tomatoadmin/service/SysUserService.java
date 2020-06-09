@@ -10,4 +10,10 @@ public interface SysUserService {
      * @return
      */
 	List<SysUser> findAll();
+	
+	/**
+	 * Auto method for test
+	 * @return
+	 */
+	SysUser selectByPrimaryKey(long id);
 }
