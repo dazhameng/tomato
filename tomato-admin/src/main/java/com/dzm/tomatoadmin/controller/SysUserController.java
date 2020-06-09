@@ -20,7 +20,7 @@ public class SysUserController {
 		return sysUserServiceImpl.findAll();
 	}
 	
-	@GetMapping(value="/findByID/{id}")
+	@GetMapping(value="/findById/{id}")
 	public Object findByID(@PathVariable long id) {
 		return sysUserServiceImpl.selectByPrimaryKey(id);
 	}
