@@ -4,10 +4,8 @@ import javax.servlet.Filter;
 import javax.servlet.Servlet;
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -18,14 +16,11 @@ import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 
 @Configuration
-@EnableConfigurationProperties((DruidDataSourceProperties.class))
 public class DruidConfig {
-
-	@Autowired
-	private DruidDataSourceProperties properties;
 	
 	@Bean
 	@ConditionalOnMissingBean
+	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource druidDataSource() {
 		return new DruidDataSource();
 	}
@@ -33,7 +28,7 @@ public class DruidConfig {
 	@Bean
 	@ConditionalOnMissingBean
 	public ServletRegistrationBean<Servlet> druidServlet(){
-		ServletRegistrationBean<Servlet> servletRegistrationBean = new ServletRegistrationBean<Servlet>(new StatViewServlet());
+		ServletRegistrationBean<Servlet> servletRegistrationBean = new ServletRegistrationBean<Servlet>(new StatViewServlet(), "/druid/*");
 		//white list
 		servletRegistrationBean.addInitParameter("allow", "127.0.0.1");
 		//balck list
