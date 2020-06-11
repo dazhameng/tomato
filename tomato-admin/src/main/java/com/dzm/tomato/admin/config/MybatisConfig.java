@@ -21,7 +21,7 @@ public class MybatisConfig {
 	public SqlSessionFactory sqlSessionFactory() throws Exception{
 		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
-		sessionFactory.setTypeAliasesPackage("com.dzm.tomatoadmin.**.model");
+		sessionFactory.setTypeAliasesPackage("com.dzm.tomato.admin.**.model");
 		
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));
