@@ -41,11 +41,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.1.2</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -79,8 +74,9 @@
 		 <!-- MYSQL -->
 		<dependency>
             <groupId>mysql</groupId>             
-            <artifactId>mysql-connector-java</artifactId>             
-            <scope>${mysql-connector-java.version}</scope>
+            <artifactId>mysql-connector-java</artifactId>          
+            <scope>provided</scope>   
+            <!-- <scope>${mysql-connector-java.version}</scope> -->
 		</dependency>
 		<!-- SPRINGBOOT DRUID -->
 		<dependency>
@@ -99,6 +95,12 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        
+        <dependency>
+			<groupId>com.dzm</groupId>
+			<artifactId>tomato-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
         
 	</dependencies>
 

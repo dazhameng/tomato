@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tomato-pom</name>
 	<description>Demo project for Spring Boot</description>
+	<packaging>pom</packaging>
 
 	<properties>
 		<java.version>14</java.version>
@@ -36,6 +37,12 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+	
+	<modules>
+		<module>../tomato-common</module>
+		<module>../tomato-core</module>
+		<module>../tomato-admin</module>
+	</modules>
 
 	<build>
 		<plugins>
