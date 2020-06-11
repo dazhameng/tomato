@@ -22,16 +22,16 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 
-    <javaModelGenerator targetPackage="com.dzm.tomatoadmin.model" targetProject="src/main/java">
+    <javaModelGenerator targetPackage="com.dzm.tomato.admin.model" targetProject="src/main/java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.dzm.tomatoadmin.sqlmap" targetProject="src/main/java">
+    <sqlMapGenerator targetPackage="com.dzm.tomato.admin.sqlmap" targetProject="src/main/java">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.dzm.tomatoadmin.dao" targetProject="src/main/java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.dzm.tomato.admin.dao" targetProject="src/main/java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
