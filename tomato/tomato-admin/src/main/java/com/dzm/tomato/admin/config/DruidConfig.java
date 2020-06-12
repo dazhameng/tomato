@@ -19,14 +19,14 @@ import com.alibaba.druid.support.http.WebStatFilter;
 public class DruidConfig {
 	
 	@Bean(name="druidDataSource")
-	@ConditionalOnMissingBean
+//	@ConditionalOnMissingBean
 	@ConfigurationProperties(prefix = "spring.datasource.druid")
 	public DataSource dataSource() {
 		return new DruidDataSource();
 	}
 	
 	@Bean
-	@ConditionalOnMissingBean
+//	@ConditionalOnMissingBean
 	public ServletRegistrationBean<Servlet> druidServlet(){
 		ServletRegistrationBean<Servlet> servletRegistrationBean = new ServletRegistrationBean<Servlet>(new StatViewServlet(), "/druid/*");
 		//white list
@@ -40,7 +40,7 @@ public class DruidConfig {
 	}
 	
 	@Bean
-	@ConditionalOnMissingBean
+//	@ConditionalOnMissingBean
 	public FilterRegistrationBean<Filter> filterRegistrationBean(){
 		FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();
 		filterRegistrationBean.setFilter(new WebStatFilter());
