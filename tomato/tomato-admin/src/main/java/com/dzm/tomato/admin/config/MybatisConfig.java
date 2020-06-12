@@ -23,8 +23,8 @@ public class MybatisConfig {
 		sessionFactory.setDataSource(dataSource);
 		sessionFactory.setTypeAliasesPackage("com.dzm.tomato.admin.**.model");
 		
-		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));
+//		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+//		sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));
 		return sessionFactory.getObject();
 	}
 	

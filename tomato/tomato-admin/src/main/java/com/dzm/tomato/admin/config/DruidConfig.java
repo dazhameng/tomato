@@ -20,8 +20,8 @@ public class DruidConfig {
 	
 	@Bean
 	@ConditionalOnMissingBean
-	@ConfigurationProperties(prefix = "spring.datasource")
-	public DataSource druidDataSource() {
+	@ConfigurationProperties(prefix = "spring.datasource.druid")
+	public DataSource dataSource() {
 		return new DruidDataSource();
 	}
 	
