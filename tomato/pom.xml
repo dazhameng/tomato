@@ -12,6 +12,7 @@
         <module>tomato-common</module>
         <module>tomato-core</module>
         <module>tomato-admin</module>
+        <module>tomato-generator</module>
     </modules>
 
     <name>tomato</name>

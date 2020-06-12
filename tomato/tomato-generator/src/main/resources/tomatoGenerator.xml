@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
+
+  <context id="TomaToTables" targetRuntime="MyBatis3DynamicSql">
+  	<!-- <jdbcConnection driverClass="${jdbc.driver}"
+        connectionURL="${db.url}"
+        userId="${db.username}"
+        password="${db.password}">
+    </jdbcConnection> -->
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true"
+        userId="root"
+        password="mysql1234">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.dzm.tomato.admin.model" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="com.dzm.tomato.admin.sqlmap" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.dzm.tomato.admin.dao" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table tableName="sys_config" />
+    <table tableName="sys_dept" />
+    <table tableName="sys_dict"></table>
+    <table tableName="sys_log"></table>
+    <table tableName="sys_login_log"></table>
+    <table tableName="sys_menu"></table>
+    <table tableName="sys_role"></table>
+    <table tableName="sys_role_dept"></table>
+    <table tableName="sys_role_menu"></table>
+    <table tableName="sys_user"></table>
+    <table tableName="sys_user_role"></table>
+
+    <!-- <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+      <columnOverride column="DATE_FIELD" property="startDate" />
+      <ignoreColumn column="FRED" />
+      <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+    </table> -->
+  </context>
+</generatorConfiguration>

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tomato-core" />
         <module name="tomato-common" />
+        <module name="tomato-generator" />
         <module name="tomato-admin" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="tomato-admin" options="-parameters" />
       <module name="tomato-common" options="-parameters" />
       <module name="tomato-core" options="-parameters" />
+      <module name="tomato-generator" options="-parameters" />
     </option>
   </component>
 </project>
