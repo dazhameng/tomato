@@ -21,7 +21,7 @@
         password="${db.password}">
     </jdbcConnection> -->
     <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;useSSL=false"
         userId="root"
         password="mysql1234">
     </jdbcConnection>
