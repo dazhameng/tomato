@@ -7,34 +7,34 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SysLoginLogDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009434+09:00", comments="Source Table: sys_login_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482104+09:00", comments="Source Table: sys_login_log")
     public static final SysLoginLog sysLoginLog = new SysLoginLog();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009598+09:00", comments="Source field: sys_login_log.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482266+09:00", comments="Source field: sys_login_log.id")
     public static final SqlColumn<Long> id = sysLoginLog.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009651+09:00", comments="Source field: sys_login_log.user_name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482325+09:00", comments="Source field: sys_login_log.user_name")
     public static final SqlColumn<String> userName = sysLoginLog.userName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009699+09:00", comments="Source field: sys_login_log.status")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482377+09:00", comments="Source field: sys_login_log.status")
     public static final SqlColumn<String> status = sysLoginLog.status;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009744+09:00", comments="Source field: sys_login_log.ip")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482426+09:00", comments="Source field: sys_login_log.ip")
     public static final SqlColumn<String> ip = sysLoginLog.ip;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.00979+09:00", comments="Source field: sys_login_log.create_by")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482491+09:00", comments="Source field: sys_login_log.create_by")
     public static final SqlColumn<String> createBy = sysLoginLog.createBy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009839+09:00", comments="Source field: sys_login_log.create_time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48255+09:00", comments="Source field: sys_login_log.create_time")
     public static final SqlColumn<Date> createTime = sysLoginLog.createTime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009884+09:00", comments="Source field: sys_login_log.last_update_by")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482601+09:00", comments="Source field: sys_login_log.last_update_by")
     public static final SqlColumn<String> lastUpdateBy = sysLoginLog.lastUpdateBy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009937+09:00", comments="Source field: sys_login_log.last_update_time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.482659+09:00", comments="Source field: sys_login_log.last_update_time")
     public static final SqlColumn<Date> lastUpdateTime = sysLoginLog.lastUpdateTime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.009521+09:00", comments="Source Table: sys_login_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48219+09:00", comments="Source Table: sys_login_log")
     public static final class SysLoginLog extends SqlTable {
         public final SqlColumn<Long> id = column("id", JDBCType.BIGINT);
 

@@ -7,52 +7,52 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SysMenuDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.012945+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486078+09:00", comments="Source Table: sys_menu")
     public static final SysMenu sysMenu = new SysMenu();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013091+09:00", comments="Source field: sys_menu.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486244+09:00", comments="Source field: sys_menu.id")
     public static final SqlColumn<Long> id = sysMenu.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013142+09:00", comments="Source field: sys_menu.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486298+09:00", comments="Source field: sys_menu.name")
     public static final SqlColumn<String> name = sysMenu.name;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013187+09:00", comments="Source field: sys_menu.parent_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486346+09:00", comments="Source field: sys_menu.parent_id")
     public static final SqlColumn<Long> parentId = sysMenu.parentId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.01323+09:00", comments="Source field: sys_menu.url")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486394+09:00", comments="Source field: sys_menu.url")
     public static final SqlColumn<String> url = sysMenu.url;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013272+09:00", comments="Source field: sys_menu.perms")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48644+09:00", comments="Source field: sys_menu.perms")
     public static final SqlColumn<String> perms = sysMenu.perms;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013315+09:00", comments="Source field: sys_menu.type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486486+09:00", comments="Source field: sys_menu.type")
     public static final SqlColumn<Integer> type = sysMenu.type;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013357+09:00", comments="Source field: sys_menu.icon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486534+09:00", comments="Source field: sys_menu.icon")
     public static final SqlColumn<String> icon = sysMenu.icon;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013398+09:00", comments="Source field: sys_menu.order_num")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48661+09:00", comments="Source field: sys_menu.order_num")
     public static final SqlColumn<Integer> orderNum = sysMenu.orderNum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013438+09:00", comments="Source field: sys_menu.remark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486675+09:00", comments="Source field: sys_menu.remark")
     public static final SqlColumn<String> remark = sysMenu.remark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013479+09:00", comments="Source field: sys_menu.create_by")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486726+09:00", comments="Source field: sys_menu.create_by")
     public static final SqlColumn<String> createBy = sysMenu.createBy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013532+09:00", comments="Source field: sys_menu.create_time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486812+09:00", comments="Source field: sys_menu.create_time")
     public static final SqlColumn<Date> createTime = sysMenu.createTime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013574+09:00", comments="Source field: sys_menu.last_update_by")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48686+09:00", comments="Source field: sys_menu.last_update_by")
     public static final SqlColumn<String> lastUpdateBy = sysMenu.lastUpdateBy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013617+09:00", comments="Source field: sys_menu.last_update_time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486911+09:00", comments="Source field: sys_menu.last_update_time")
     public static final SqlColumn<Date> lastUpdateTime = sysMenu.lastUpdateTime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.01366+09:00", comments="Source field: sys_menu.dept_flag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486957+09:00", comments="Source field: sys_menu.dept_flag")
     public static final SqlColumn<Byte> deptFlag = sysMenu.deptFlag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013022+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.486168+09:00", comments="Source Table: sys_menu")
     public static final class SysMenu extends SqlTable {
         public final SqlColumn<Long> id = column("id", JDBCType.BIGINT);
 

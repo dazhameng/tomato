@@ -34,31 +34,31 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface SysMenuMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014583+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487789+09:00", comments="Source Table: sys_menu")
     BasicColumn[] selectList = BasicColumn.columnList(id, name, parentId, url, perms, type, icon, orderNum, remark, createBy, createTime, lastUpdateBy, lastUpdateTime, deptFlag);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013704+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487004+09:00", comments="Source Table: sys_menu")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013742+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487045+09:00", comments="Source Table: sys_menu")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013779+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48709+09:00", comments="Source Table: sys_menu")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SysMenu> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013817+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487131+09:00", comments="Source Table: sys_menu")
     @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
     int insertMultiple(MultiRowInsertStatementProvider<SysMenu> multipleInsertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013857+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487173+09:00", comments="Source Table: sys_menu")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SysMenuResult")
     Optional<SysMenu> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.013899+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48722+09:00", comments="Source Table: sys_menu")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SysMenuResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -78,28 +78,28 @@ public interface SysMenuMapper {
     })
     List<SysMenu> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014102+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487327+09:00", comments="Source Table: sys_menu")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014149+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487367+09:00", comments="Source Table: sys_menu")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014193+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487403+09:00", comments="Source Table: sys_menu")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.01423+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487439+09:00", comments="Source Table: sys_menu")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.01427+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487481+09:00", comments="Source Table: sys_menu")
     default int insert(SysMenu record) {
         return MyBatis3Utils.insert(this::insert, record, sysMenu, c ->
             c.map(id).toProperty("id")
@@ -119,7 +119,7 @@ public interface SysMenuMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014344+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487554+09:00", comments="Source Table: sys_menu")
     default int insertMultiple(Collection<SysMenu> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, sysMenu, c ->
             c.map(id).toProperty("id")
@@ -139,7 +139,7 @@ public interface SysMenuMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014413+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487627+09:00", comments="Source Table: sys_menu")
     default int insertSelective(SysMenu record) {
         return MyBatis3Utils.insert(this::insert, record, sysMenu, c ->
             c.map(id).toPropertyWhenPresent("id", record::getId)
@@ -159,34 +159,34 @@ public interface SysMenuMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014623+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48783+09:00", comments="Source Table: sys_menu")
     default Optional<SysMenu> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014661+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.48787+09:00", comments="Source Table: sys_menu")
     default List<SysMenu> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014698+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487911+09:00", comments="Source Table: sys_menu")
     default List<SysMenu> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014747+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487951+09:00", comments="Source Table: sys_menu")
     default Optional<SysMenu> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.01479+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.487993+09:00", comments="Source Table: sys_menu")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, sysMenu, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014826+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.488031+09:00", comments="Source Table: sys_menu")
     static UpdateDSL<UpdateModel> updateAllColumns(SysMenu record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalTo(record::getId)
                 .set(name).equalTo(record::getName)
@@ -204,7 +204,7 @@ public interface SysMenuMapper {
                 .set(deptFlag).equalTo(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.014983+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.488149+09:00", comments="Source Table: sys_menu")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(SysMenu record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalToWhenPresent(record::getId)
                 .set(name).equalToWhenPresent(record::getName)
@@ -222,7 +222,7 @@ public interface SysMenuMapper {
                 .set(deptFlag).equalToWhenPresent(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.015113+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.488279+09:00", comments="Source Table: sys_menu")
     default int updateByPrimaryKey(SysMenu record) {
         return update(c ->
             c.set(name).equalTo(record::getName)
@@ -242,7 +242,7 @@ public interface SysMenuMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.015214+09:00", comments="Source Table: sys_menu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.488382+09:00", comments="Source Table: sys_menu")
     default int updateByPrimaryKeySelective(SysMenu record) {
         return update(c ->
             c.set(name).equalToWhenPresent(record::getName)

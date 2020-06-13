@@ -6,37 +6,52 @@
 <generatorConfiguration>
   <!-- <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
 
-  <context id="TomaToTables" targetRuntime="MyBatis3DynamicSql">
+  <context id="tomaToTables" defaultModelType="flat">
+
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+
+    <commentGenerator>
+      <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+      <property name="suppressAllComments" value="false"/>
+    </commentGenerator>
+
   	<!-- <jdbcConnection driverClass="${jdbc.driver}"
         connectionURL="${db.url}"
         userId="${db.username}"
         password="${db.password}">
     </jdbcConnection> -->
     <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/tomato?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8"
         userId="root"
         password="mysql1234">
     </jdbcConnection>
 
-    <javaTypeResolver >
+    <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL和 NUMERIC 类型解析为java.math.BigDecimal -->
+    <javaTypeResolver>
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 
+    <!-- targetProject:生成PO类的位置 -->
     <javaModelGenerator targetPackage="com.dzm.tomato.admin.model" targetProject="src/main/java">
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="true" />
+      <!-- 从数据库返回的值被清理前后的空格 -->
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
     <sqlMapGenerator targetPackage="com.dzm.tomato.admin.sqlmap" targetProject="src/main/java">
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 
+    <!-- targetPackage：mapper接口生成的位置 -->
     <javaClientGenerator type="XMLMAPPER" targetPackage="com.dzm.tomato.admin.dao" targetProject="src/main/java">
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
-    <table tableName="sys_config" />
-    <table tableName="sys_dept" />
+    <table tableName="sys_config"></table>
+    <table tableName="sys_dept"></table>
     <table tableName="sys_dict"></table>
     <table tableName="sys_log"></table>
     <table tableName="sys_login_log"></table>

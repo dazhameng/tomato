@@ -34,31 +34,31 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface SysLogMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007266+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480076+09:00", comments="Source Table: sys_log")
     BasicColumn[] selectList = BasicColumn.columnList(id, userName, operation, method, params, time, ip, remark, createBy, createTime, lastUpdateBy, lastUpdateTime, deptFlag);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006482+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479107+09:00", comments="Source Table: sys_log")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.00653+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479157+09:00", comments="Source Table: sys_log")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006572+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479202+09:00", comments="Source Table: sys_log")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SysLog> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006617+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479249+09:00", comments="Source Table: sys_log")
     @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
     int insertMultiple(MultiRowInsertStatementProvider<SysLog> multipleInsertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006663+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479297+09:00", comments="Source Table: sys_log")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SysLogResult")
     Optional<SysLog> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006715+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479353+09:00", comments="Source Table: sys_log")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SysLogResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -77,28 +77,28 @@ public interface SysLogMapper {
     })
     List<SysLog> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006818+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479461+09:00", comments="Source Table: sys_log")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006861+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479507+09:00", comments="Source Table: sys_log")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006901+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.47955+09:00", comments="Source Table: sys_log")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006939+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479598+09:00", comments="Source Table: sys_log")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.006983+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479645+09:00", comments="Source Table: sys_log")
     default int insert(SysLog record) {
         return MyBatis3Utils.insert(this::insert, record, sysLog, c ->
             c.map(id).toProperty("id")
@@ -117,7 +117,7 @@ public interface SysLogMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007058+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479723+09:00", comments="Source Table: sys_log")
     default int insertMultiple(Collection<SysLog> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, sysLog, c ->
             c.map(id).toProperty("id")
@@ -136,7 +136,7 @@ public interface SysLogMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007132+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.479807+09:00", comments="Source Table: sys_log")
     default int insertSelective(SysLog record) {
         return MyBatis3Utils.insert(this::insert, record, sysLog, c ->
             c.map(id).toPropertyWhenPresent("id", record::getId)
@@ -155,34 +155,34 @@ public interface SysLogMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.00731+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480127+09:00", comments="Source Table: sys_log")
     default Optional<SysLog> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007354+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480179+09:00", comments="Source Table: sys_log")
     default List<SysLog> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007397+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480226+09:00", comments="Source Table: sys_log")
     default List<SysLog> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007449+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480276+09:00", comments="Source Table: sys_log")
     default Optional<SysLog> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.0075+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480327+09:00", comments="Source Table: sys_log")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, sysLog, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007543+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480373+09:00", comments="Source Table: sys_log")
     static UpdateDSL<UpdateModel> updateAllColumns(SysLog record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalTo(record::getId)
                 .set(userName).equalTo(record::getUserName)
@@ -199,7 +199,7 @@ public interface SysLogMapper {
                 .set(deptFlag).equalTo(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007637+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480483+09:00", comments="Source Table: sys_log")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(SysLog record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalToWhenPresent(record::getId)
                 .set(userName).equalToWhenPresent(record::getUserName)
@@ -216,7 +216,7 @@ public interface SysLogMapper {
                 .set(deptFlag).equalToWhenPresent(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007743+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480609+09:00", comments="Source Table: sys_log")
     default int updateByPrimaryKey(SysLog record) {
         return update(c ->
             c.set(userName).equalTo(record::getUserName)
@@ -235,7 +235,7 @@ public interface SysLogMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.007844+09:00", comments="Source Table: sys_log")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.480723+09:00", comments="Source Table: sys_log")
     default int updateByPrimaryKeySelective(SysLog record) {
         return update(c ->
             c.set(userName).equalToWhenPresent(record::getUserName)

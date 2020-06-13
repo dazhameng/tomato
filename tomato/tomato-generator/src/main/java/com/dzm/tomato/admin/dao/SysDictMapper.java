@@ -34,31 +34,31 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface SysDictMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002981+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475166+09:00", comments="Source Table: sys_dict")
     BasicColumn[] selectList = BasicColumn.columnList(id, value, label, type, description, sort, remark, createBy, createTime, lastUpdateBy, lastUpdateTime, deptFlag);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.00213+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474256+09:00", comments="Source Table: sys_dict")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.00219+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474311+09:00", comments="Source Table: sys_dict")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002241+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474363+09:00", comments="Source Table: sys_dict")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SysDict> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002289+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474413+09:00", comments="Source Table: sys_dict")
     @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
     int insertMultiple(MultiRowInsertStatementProvider<SysDict> multipleInsertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002339+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474465+09:00", comments="Source Table: sys_dict")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SysDictResult")
     Optional<SysDict> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002394+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474552+09:00", comments="Source Table: sys_dict")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SysDictResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -76,28 +76,28 @@ public interface SysDictMapper {
     })
     List<SysDict> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.0025+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474671+09:00", comments="Source Table: sys_dict")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002547+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474721+09:00", comments="Source Table: sys_dict")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002591+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474766+09:00", comments="Source Table: sys_dict")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002633+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474812+09:00", comments="Source Table: sys_dict")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002679+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474859+09:00", comments="Source Table: sys_dict")
     default int insert(SysDict record) {
         return MyBatis3Utils.insert(this::insert, record, sysDict, c ->
             c.map(id).toProperty("id")
@@ -115,7 +115,7 @@ public interface SysDictMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002758+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.474939+09:00", comments="Source Table: sys_dict")
     default int insertMultiple(Collection<SysDict> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, sysDict, c ->
             c.map(id).toProperty("id")
@@ -133,7 +133,7 @@ public interface SysDictMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.002842+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475021+09:00", comments="Source Table: sys_dict")
     default int insertSelective(SysDict record) {
         return MyBatis3Utils.insert(this::insert, record, sysDict, c ->
             c.map(id).toPropertyWhenPresent("id", record::getId)
@@ -151,34 +151,34 @@ public interface SysDictMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003027+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475215+09:00", comments="Source Table: sys_dict")
     default Optional<SysDict> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003073+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475271+09:00", comments="Source Table: sys_dict")
     default List<SysDict> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003118+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.47535+09:00", comments="Source Table: sys_dict")
     default List<SysDict> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003254+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.4754+09:00", comments="Source Table: sys_dict")
     default Optional<SysDict> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003322+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475455+09:00", comments="Source Table: sys_dict")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, sysDict, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003371+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475505+09:00", comments="Source Table: sys_dict")
     static UpdateDSL<UpdateModel> updateAllColumns(SysDict record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalTo(record::getId)
                 .set(value).equalTo(record::getValue)
@@ -194,7 +194,7 @@ public interface SysDictMapper {
                 .set(deptFlag).equalTo(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003474+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475614+09:00", comments="Source Table: sys_dict")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(SysDict record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalToWhenPresent(record::getId)
                 .set(value).equalToWhenPresent(record::getValue)
@@ -210,7 +210,7 @@ public interface SysDictMapper {
                 .set(deptFlag).equalToWhenPresent(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003588+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475732+09:00", comments="Source Table: sys_dict")
     default int updateByPrimaryKey(SysDict record) {
         return update(c ->
             c.set(value).equalTo(record::getValue)
@@ -228,7 +228,7 @@ public interface SysDictMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:50.003694+09:00", comments="Source Table: sys_dict")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.475838+09:00", comments="Source Table: sys_dict")
     default int updateByPrimaryKeySelective(SysDict record) {
         return update(c ->
             c.set(value).equalToWhenPresent(record::getValue)
