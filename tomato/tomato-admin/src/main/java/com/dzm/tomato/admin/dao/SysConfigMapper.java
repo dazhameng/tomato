@@ -24,36 +24,35 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.dzm.tomato.admin.dao.SysConfigDynamicSqlSupport.*;
-import static org.mybatis.dynamic.sql.SqlBuilder.*;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 
 @Mapper
 public interface SysConfigMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993479+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465066+09:00", comments="Source Table: sys_config")
     BasicColumn[] selectList = BasicColumn.columnList(id, value, label, type, description, sort, remark, createBy, createTime, lastUpdateBy, lastUpdateTime, deptFlag);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992413+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.463909+09:00", comments="Source Table: sys_config")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992474+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.463975+09:00", comments="Source Table: sys_config")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992532+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464034+09:00", comments="Source Table: sys_config")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SysConfig> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992589+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464096+09:00", comments="Source Table: sys_config")
     @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
     int insertMultiple(MultiRowInsertStatementProvider<SysConfig> multipleInsertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992655+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464159+09:00", comments="Source Table: sys_config")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SysConfigResult")
     Optional<SysConfig> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992719+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464231+09:00", comments="Source Table: sys_config")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SysConfigResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -71,28 +70,28 @@ public interface SysConfigMapper {
     })
     List<SysConfig> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992855+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464375+09:00", comments="Source Table: sys_config")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992906+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464432+09:00", comments="Source Table: sys_config")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.992957+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.46449+09:00", comments="Source Table: sys_config")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993033+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.46457+09:00", comments="Source Table: sys_config")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993125+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464674+09:00", comments="Source Table: sys_config")
     default int insert(SysConfig record) {
         return MyBatis3Utils.insert(this::insert, record, sysConfig, c ->
             c.map(id).toProperty("id")
@@ -110,7 +109,7 @@ public interface SysConfigMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.99322+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464783+09:00", comments="Source Table: sys_config")
     default int insertMultiple(Collection<SysConfig> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, sysConfig, c ->
             c.map(id).toProperty("id")
@@ -128,7 +127,7 @@ public interface SysConfigMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993319+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.464885+09:00", comments="Source Table: sys_config")
     default int insertSelective(SysConfig record) {
         return MyBatis3Utils.insert(this::insert, record, sysConfig, c ->
             c.map(id).toPropertyWhenPresent("id", record::getId)
@@ -146,34 +145,34 @@ public interface SysConfigMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993533+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465133+09:00", comments="Source Table: sys_config")
     default Optional<SysConfig> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993595+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465194+09:00", comments="Source Table: sys_config")
     default List<SysConfig> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993651+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465264+09:00", comments="Source Table: sys_config")
     default List<SysConfig> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993722+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465346+09:00", comments="Source Table: sys_config")
     default Optional<SysConfig> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993795+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465432+09:00", comments="Source Table: sys_config")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, sysConfig, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993847+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465498+09:00", comments="Source Table: sys_config")
     static UpdateDSL<UpdateModel> updateAllColumns(SysConfig record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalTo(record::getId)
                 .set(value).equalTo(record::getValue)
@@ -189,7 +188,7 @@ public interface SysConfigMapper {
                 .set(deptFlag).equalTo(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.993959+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465634+09:00", comments="Source Table: sys_config")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(SysConfig record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalToWhenPresent(record::getId)
                 .set(value).equalToWhenPresent(record::getValue)
@@ -205,7 +204,7 @@ public interface SysConfigMapper {
                 .set(deptFlag).equalToWhenPresent(record::getDeptFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.994092+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465789+09:00", comments="Source Table: sys_config")
     default int updateByPrimaryKey(SysConfig record) {
         return update(c ->
             c.set(value).equalTo(record::getValue)
@@ -223,7 +222,7 @@ public interface SysConfigMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-12T10:39:49.994244+09:00", comments="Source Table: sys_config")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.465961+09:00", comments="Source Table: sys_config")
     default int updateByPrimaryKeySelective(SysConfig record) {
         return update(c ->
             c.set(value).equalToWhenPresent(record::getValue)
