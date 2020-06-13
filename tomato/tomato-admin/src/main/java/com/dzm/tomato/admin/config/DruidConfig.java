@@ -18,11 +18,17 @@ import com.alibaba.druid.support.http.WebStatFilter;
 @Configuration
 public class DruidConfig {
 	
-	@Bean(name="druidDataSource")
-//	@ConditionalOnMissingBean
+//	@Bean(name="druidDataSource")
+////	@ConditionalOnMissingBean
+//	@ConfigurationProperties(prefix = "spring.datasource.druid")
+//	public DataSource dataSource() {
+//		return new DruidDataSource();
+//	}
+
 	@ConfigurationProperties(prefix = "spring.datasource.druid")
-	public DataSource dataSource() {
-		return new DruidDataSource();
+	@Bean
+	public DataSource druid(){
+		return  new DruidDataSource();
 	}
 	
 	@Bean
