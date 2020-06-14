@@ -19,6 +19,13 @@
             <artifactId>tomato-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!-- PageHelper 5 -->
+<!--        <dependency>-->
+<!--            <groupId>com.github.pagehelper</groupId>-->
+<!--            <artifactId>pagehelper</artifactId>-->
+<!--            <version>5.1.11</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
