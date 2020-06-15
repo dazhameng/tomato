@@ -1,19 +1,26 @@
 package com.dzm.tomato.admin.service;
 
 import java.util.List;
+import java.util.Set;
 
 import com.dzm.tomato.admin.model.SysUser;
+import com.dzm.tomato.core.service.CrudService;
 
-public interface SysUserService {
+public interface SysUserService extends CrudService<SysUser> {
 	/**
      * Custom method for test
-     * @return
      */
 	List<SysUser> findAll();
-	
+
 	/**
-	 * Auto method for test
-	 * @return
+	 * findByName
+	 * @param name
 	 */
-	SysUser selectByPrimaryKey(long id);
+	SysUser findByName(String name);
+
+	/**
+	 * findPermissions
+	 * @param id
+	 */
+	Set<String> findPermissions(long id);
 }

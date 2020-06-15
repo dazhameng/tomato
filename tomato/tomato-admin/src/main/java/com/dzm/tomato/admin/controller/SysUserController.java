@@ -22,6 +22,6 @@ public class SysUserController {
 	
 	@GetMapping(value="/findById/{id}")
 	public Object findByID(@PathVariable long id) {
-		return sysUserServiceImpl.selectByPrimaryKey(id);
+		return sysUserServiceImpl.findById(id);
 	}
 }
