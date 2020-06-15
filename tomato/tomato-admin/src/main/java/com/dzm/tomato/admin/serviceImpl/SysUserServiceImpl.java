@@ -17,7 +17,6 @@ import com.dzm.tomato.admin.model.SysUser;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
-import static org.mybatis.dynamic.sql.SqlBuilder.isIn;
 
 @Service
 public class SysUserServiceImpl implements SysUserService{
