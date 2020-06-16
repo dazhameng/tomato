@@ -1,11 +1,11 @@
 package com.dzm.tomato.admin.serviceImpl;
 
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.SysDictDynamicSqlSupport;
 import com.dzm.tomato.admin.dao.SysDictMapper;
 import com.dzm.tomato.admin.model.SysDict;
 import com.dzm.tomato.admin.service.SysDictService;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,11 +45,12 @@ public class SysDictServiceImpl implements SysDictService {
     }
 
     @Override
-    public PageResult<SysDict> findPage(Page page) {
-        int offset = (page.getPageNumber() - 1) * page.getPageSize();
-        List<SysDict> list = sysDictMapper.select(c -> c.limit(offset).offset(offset));
-        PageResult<SysDict> pageResult = new PageResult<SysDict>();
-        pageResult.addAll(list);
-        return pageResult;
+    public PageResult<SysDict> findPage(PageRequest pageRequest) {
+//        int offset = (page.getPageNumber() - 1) * page.getPageSize();
+//        List<SysDict> list = sysDictMapper.select(c -> c.limit(offset).offset(offset));
+//        PageResult<SysDict> pageResult = new PageResult<SysDict>();
+//        pageResult.addAll(list);
+//        return pageResult;
+        return null;
     }
 }

@@ -1,11 +1,11 @@
 package com.dzm.tomato.admin.serviceImpl;
 
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.SysLogDynamicSqlSupport;
 import com.dzm.tomato.admin.dao.SysLogMapper;
 import com.dzm.tomato.admin.model.SysLog;
 import com.dzm.tomato.admin.service.SysLogService;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import static org.mybatis.dynamic.sql.SqlBuilder.isIn;
@@ -45,11 +45,12 @@ public class SysLogServiceImpl implements SysLogService {
     }
 
     @Override
-    public PageResult<SysLog> findPage(Page page) {
-        int offset = (page.getPageNumber() - 1) * page.getPageSize();
-        List<SysLog> list = sysLogMapper.select(c -> c.limit(page.getPageSize()).offset(offset));
-        PageResult<SysLog> pageResult = new PageResult<SysLog>();
-        pageResult.addAll(list);
-        return pageResult;
+    public PageResult<SysLog> findPage(PageRequest pageRequest) {
+//        int offset = (page.getPageNumber() - 1) * page.getPageSize();
+//        List<SysLog> list = sysLogMapper.select(c -> c.limit(page.getPageSize()).offset(offset));
+//        PageResult<SysLog> pageResult = new PageResult<SysLog>();
+//        pageResult.addAll(list);
+//        return pageResult;
+        return null;
     }
 }

@@ -1,7 +1,7 @@
 package com.dzm.tomato.core.service;
 
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
 
 public interface CrudService<T> {
 
@@ -31,7 +31,7 @@ public interface CrudService<T> {
 
     /**
      * findPage
-     * @param page
+     * @param pageRequest
      */
-    PageResult<T> findPage(Page page);
+    PageResult<T> findPage(PageRequest pageRequest);
 }

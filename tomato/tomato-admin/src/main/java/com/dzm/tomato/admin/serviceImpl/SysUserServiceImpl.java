@@ -1,16 +1,16 @@
 package com.dzm.tomato.admin.serviceImpl;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.*;
 import com.dzm.tomato.admin.model.SysMenu;
 import com.dzm.tomato.admin.model.SysRole;
 import com.dzm.tomato.admin.model.SysUserRole;
+import com.dzm.tomato.core.page.MybatisPageHelper;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
+import org.mybatis.dynamic.sql.select.SelectDSLCompleter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +35,7 @@ public class SysUserServiceImpl implements SysUserService{
 	@Override
 	public List<SysUser> findAll() {
 //		return sysUserMapper.findAll();
+//		return sysUserMapper.select(SelectDSLCompleter.allRows());
 //		return sysUserMapper.select(c -> c);
 //		RowBounds rowBounds = new RowBounds(1,5);
 //		List<SysUser> list  = sysUserMapper.select(c ->
@@ -106,13 +107,15 @@ public class SysUserServiceImpl implements SysUserService{
 	}
 
 	@Override
-	public PageResult<SysUser> findPage(Page page) {
-		int offset = (page.getPageNumber() - 1) * page.getPageSize();
-		int limit = page.getPageSize();
-		List<SysUser> list = sysUserMapper.select(c ->
-				c.limit(limit).offset(offset));
-		PageResult<SysUser> result = new PageResult<SysUser>();
-		result.addAll(list);
-		return result;
+	public PageResult<SysUser> findPage(PageRequest pageRequest) {
+//		int offset = (page.getPageNumber() - 1) * page.getPageSize();
+//		int limit = page.getPageSize();
+//		List<SysUser> list = sysUserMapper.select(c ->
+//				c.limit(limit).offset(offset));
+//		PageResult<SysUser> result = new PageResult<SysUser>();
+//		result.addAll(list);
+//		return result;
+
+		return MybatisPageHelper.findPage(pageRequest, sysUserMapper, "select", SelectDSLCompleter.allRows());
 	}
 }

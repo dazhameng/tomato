@@ -1,12 +1,10 @@
 package com.dzm.tomato.admin.serviceImpl;
 
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.SysDeptMapper;
 import com.dzm.tomato.admin.model.SysDept;
-import com.dzm.tomato.admin.model.SysDict;
 import com.dzm.tomato.admin.service.SysDeptService;
-import org.mybatis.dynamic.sql.select.SelectDSLCompleter;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -89,11 +87,12 @@ public class SysDeptServiceImpl implements SysDeptService {
     }
 
     @Override
-    public PageResult<SysDept> findPage(Page page) {
-        int offset = (page.getPageNumber() - 1) * page.getPageSize();
-        List<SysDept> list = sysDeptMapper.select(c -> c.limit(offset).offset(offset));
-        PageResult<SysDept> pageResult = new PageResult<SysDept>();
-        pageResult.addAll(list);
-        return pageResult;
+    public PageResult<SysDept> findPage(PageRequest pageRequest) {
+//        int offset = (page.getPageNumber() - 1) * page.getPageSize();
+//        List<SysDept> list = sysDeptMapper.select(c -> c.limit(offset).offset(offset));
+//        PageResult<SysDept> pageResult = new PageResult<SysDept>();
+//        pageResult.addAll(list);
+//        return pageResult;
+        return null;
     }
 }

@@ -62,7 +62,12 @@ public class ReflectionUtils {
                         if(arg == null) {
                             arg = "";
                         }
-                        if(!parameterTypes[i].equals(args[i].getClass())) {
+//                        if(!parameterTypes[i].equals(args[i].getClass())) {
+//                            isSameMethod = false;
+//                        }
+                        String tempParamName = parameterTypes[i].getName();
+                        String tempFullClassName = args[i].getClass().getName();
+                        if(tempFullClassName.indexOf(tempParamName) == -1){
                             isSameMethod = false;
                         }
                     }

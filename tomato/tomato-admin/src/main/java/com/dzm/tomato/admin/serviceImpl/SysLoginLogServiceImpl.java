@@ -1,11 +1,11 @@
 package com.dzm.tomato.admin.serviceImpl;
 
-import cn.hutool.db.Page;
-import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.SysLoginLogDynamicSqlSupport;
 import com.dzm.tomato.admin.dao.SysLoginLogMapper;
 import com.dzm.tomato.admin.model.SysLoginLog;
 import com.dzm.tomato.admin.service.SysLoginLogService;
+import com.dzm.tomato.core.page.PageRequest;
+import com.dzm.tomato.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,11 +45,12 @@ public class SysLoginLogServiceImpl implements SysLoginLogService {
     }
 
     @Override
-    public PageResult<SysLoginLog> findPage(Page page) {
-        int offset = (page.getPageNumber() - 1) * page.getPageSize();
-        List<SysLoginLog> list = sysLoginLogMapper.select(c -> c.limit(page.getPageSize()).offset(offset));
-        PageResult<SysLoginLog> pageResult = new PageResult<SysLoginLog>();
-        pageResult.addAll(list);
-        return pageResult;
+    public PageResult<SysLoginLog> findPage(PageRequest pageRequest) {
+//        int offset = (page.getPageNumber() - 1) * page.getPageSize();
+//        List<SysLoginLog> list = sysLoginLogMapper.select(c -> c.limit(page.getPageSize()).offset(offset));
+//        PageResult<SysLoginLog> pageResult = new PageResult<SysLoginLog>();
+//        pageResult.addAll(list);
+//        return pageResult;
+        return null;
     }
 }
