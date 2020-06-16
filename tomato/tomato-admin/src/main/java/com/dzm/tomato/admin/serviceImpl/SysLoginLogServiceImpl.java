@@ -7,11 +7,13 @@ import com.dzm.tomato.admin.dao.SysLoginLogMapper;
 import com.dzm.tomato.admin.model.SysLoginLog;
 import com.dzm.tomato.admin.service.SysLoginLogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 import static org.mybatis.dynamic.sql.SqlBuilder.isIn;
 
+@Service
 public class SysLoginLogServiceImpl implements SysLoginLogService {
 
     @Autowired

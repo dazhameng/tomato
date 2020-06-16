@@ -7,11 +7,13 @@ import com.dzm.tomato.admin.dao.SysDictMapper;
 import com.dzm.tomato.admin.model.SysDict;
 import com.dzm.tomato.admin.service.SysDictService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 import static org.mybatis.dynamic.sql.SqlBuilder.isIn;
 
+@Service
 public class SysDictServiceImpl implements SysDictService {
 
     @Autowired
