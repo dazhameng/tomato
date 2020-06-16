@@ -41,7 +41,6 @@ public class MybatisPageHelper {
         pageResult.setTotal((int) pageInfo.getTotal());
         pageResult.setTotalPage(pageInfo.getPages());
         pageResult.addAll(pageInfo.getList());
-        System.out.println(pageResult.getTotal());
         return pageResult;
     }
 }
