@@ -107,7 +107,7 @@ public class SysUserServiceImpl implements SysUserService{
 	}
 
 	@Override
-	public PageResult<SysUser> findPage(PageRequest pageRequest) {
+	public PageResult findPage(PageRequest pageRequest) {
 //		int offset = (page.getPageNumber() - 1) * page.getPageSize();
 //		int limit = page.getPageSize();
 //		List<SysUser> list = sysUserMapper.select(c ->

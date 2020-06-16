@@ -36,11 +36,12 @@ public class MybatisPageHelper {
         Object result = ReflectionUtils.invoke(mapper, FINDPAGE, arg);
         PageInfo<?> pageInfo = new PageInfo<>((List) result);
         PageResult pageResult = new PageResult();
-        pageResult.setPage(pageInfo.getPageNum());
-        pageResult.setPageSize(pageInfo.getPageSize());
-        pageResult.setTotal((int) pageInfo.getTotal());
-        pageResult.setTotalPage(pageInfo.getPages());
-        pageResult.addAll(pageInfo.getList());
+        pageResult.setPageInfo(pageInfo);
+//        pageResult.setPage(pageInfo.getPageNum());
+//        pageResult.setPageSize(pageInfo.getPageSize());
+//        pageResult.setTotal((int) pageInfo.getTotal());
+//        pageResult.setTotalPage(pageInfo.getPages());
+//        pageResult.addAll(pageInfo.getList());
         return pageResult;
     }
 }

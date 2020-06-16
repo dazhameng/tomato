@@ -87,7 +87,7 @@ public class SysDeptServiceImpl implements SysDeptService {
     }
 
     @Override
-    public PageResult<SysDept> findPage(PageRequest pageRequest) {
+    public PageResult findPage(PageRequest pageRequest) {
 //        int offset = (page.getPageNumber() - 1) * page.getPageSize();
 //        List<SysDept> list = sysDeptMapper.select(c -> c.limit(offset).offset(offset));
 //        PageResult<SysDept> pageResult = new PageResult<SysDept>();

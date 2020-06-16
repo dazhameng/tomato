@@ -45,7 +45,7 @@ public class SysDictServiceImpl implements SysDictService {
     }
 
     @Override
-    public PageResult<SysDict> findPage(PageRequest pageRequest) {
+    public PageResult findPage(PageRequest pageRequest) {
 //        int offset = (page.getPageNumber() - 1) * page.getPageSize();
 //        List<SysDict> list = sysDictMapper.select(c -> c.limit(offset).offset(offset));
 //        PageResult<SysDict> pageResult = new PageResult<SysDict>();

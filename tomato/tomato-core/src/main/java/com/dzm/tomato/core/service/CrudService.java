@@ -33,5 +33,5 @@ public interface CrudService<T> {
      * findPage
      * @param pageRequest
      */
-    PageResult<T> findPage(PageRequest pageRequest);
+    PageResult findPage(PageRequest pageRequest);
 }

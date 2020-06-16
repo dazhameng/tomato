@@ -45,7 +45,7 @@ public class SysLogServiceImpl implements SysLogService {
     }
 
     @Override
-    public PageResult<SysLog> findPage(PageRequest pageRequest) {
+    public PageResult findPage(PageRequest pageRequest) {
 //        int offset = (page.getPageNumber() - 1) * page.getPageSize();
 //        List<SysLog> list = sysLogMapper.select(c -> c.limit(page.getPageSize()).offset(offset));
 //        PageResult<SysLog> pageResult = new PageResult<SysLog>();
