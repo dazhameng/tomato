@@ -3,6 +3,7 @@ package com.dzm.tomato.admin.model;
 import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class SysDept implements Serializable {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.466418+09:00", comments="Source field: sys_dept.id")
@@ -37,6 +38,13 @@ public class SysDept implements Serializable {
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.467806+09:00", comments="Source Table: sys_dept")
     private static final long serialVersionUID = 1L;
+
+    // 非数据库字段
+    private List<SysDept> children;
+    // 非数据库字段
+    private String parentName;
+    // 非数据库字段
+    private Integer level;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.466471+09:00", comments="Source field: sys_dept.id")
     public Long getId() {
@@ -136,5 +144,24 @@ public class SysDept implements Serializable {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.46776+09:00", comments="Source field: sys_dept.dept_flag")
     public void setDeptFlag(Byte deptFlag) {
         this.deptFlag = deptFlag;
+    }
+
+    public List<SysDept> getChildren() {
+        return children;
+    }
+    public void setChildren(List<SysDept> children) {
+        this.children = children;
+    }
+    public String getParentName() {
+        return parentName;
+    }
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
+    public Integer getLevel() {
+        return level;
+    }
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }
