@@ -24,7 +24,7 @@ public interface SysUserService extends CrudService<SysUser> {
 
 	/**
 	 * findPermissions
-	 * @param id
+	 * @param userId
 	 * @return
 	 */
 	Set<String> findPermissions(Long userId);
