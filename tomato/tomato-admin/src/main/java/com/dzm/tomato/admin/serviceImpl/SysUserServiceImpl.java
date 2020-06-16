@@ -1,5 +1,6 @@
 package com.dzm.tomato.admin.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -7,6 +8,7 @@ import java.util.Set;
 import cn.hutool.db.Page;
 import cn.hutool.db.PageResult;
 import com.dzm.tomato.admin.dao.*;
+import com.dzm.tomato.admin.model.SysMenu;
 import com.dzm.tomato.admin.model.SysRole;
 import com.dzm.tomato.admin.model.SysUserRole;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class SysUserServiceImpl implements SysUserService{
 
 	@Autowired
 	private SysUserRoleMapper sysUserRoleMapper;
+
+	@Autowired
+	private SysRoleMapper sysRoleMapper;
 
 	@Override
 	public List<SysUser> findAll() {
@@ -59,7 +64,7 @@ public class SysUserServiceImpl implements SysUserService{
 
 	@Transactional
 	@Override
-	public int delete(long id) {
+	public int delete(Long id) {
 		deleteSysUserRole(id);
 		return sysUserMapper.deleteByPrimaryKey(id);
 	}
@@ -69,7 +74,7 @@ public class SysUserServiceImpl implements SysUserService{
 	}
 
 	@Override
-	public SysUser findById(long id) {
+	public SysUser findById(Long id) {
 		return sysUserMapper.selectByPrimaryKey(id).get();
 	}
 
@@ -79,20 +84,25 @@ public class SysUserServiceImpl implements SysUserService{
 	}
 
 	@Override
-	public Set<String> findPermissions(long id) {
-//		List<SysUserRole> surList = sysUserRoleMapper.select( c -> c.where( SysUserRoleDynamicSqlSupport.userId, isEqualTo(id)));
-//		Set<Long> roleIdList = new HashSet<Long>();
-//		for(SysUserRole sur: surList){
-//			roleIdList.add(sur.getRoleId());
-//		}
-//
-//		List<SysRole> roleList = sysRoleMapper.select( c -> c.where(SysRoleDynamicSqlSupport.id, isIn(roleIdList)));
-//		for(SysRole sysRole: roleList){
-//			string tempPerm = sysRole
-//		}
-//
-//		Set<String> result = new HashSet<String>();
+	public Set<String> findPermissions(Long userId) {
+		List<SysUserRole> sysUserRoles = sysUserRoleMapper.select(c -> c.where(SysUserRoleDynamicSqlSupport.userId, isEqualTo(userId)));
+		List<SysRole> sysRoles = new ArrayList<SysRole>();
+		for (SysUserRole sysUserRole: sysUserRoles){
+			sysRoles.add(sysRoleMapper.selectByPrimaryKey(sysUserRole.getRoleId()).get());
+		}
+		List<SysMenu> sysMenus = new ArrayList<SysMenu>();
+		// to do
 		return null;
+	}
+
+	@Override
+	public List<SysRole> findUserRoles(Long userId){
+		List<SysUserRole> sysUserRoles = sysUserRoleMapper.select(c -> c.where(SysUserRoleDynamicSqlSupport.userId, isEqualTo(userId)));
+		List<SysRole> sysRoles = new ArrayList<SysRole>();
+		for (SysUserRole sysUserRole: sysUserRoles){
+			sysRoles.add(sysRoleMapper.selectByPrimaryKey(sysUserRole.getRoleId()).get());
+		}
+		return sysRoles;
 	}
 
 	@Override

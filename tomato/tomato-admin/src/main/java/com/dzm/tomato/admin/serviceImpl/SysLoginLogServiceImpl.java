@@ -33,12 +33,12 @@ public class SysLoginLogServiceImpl implements SysLoginLogService {
     }
 
     @Override
-    public int delete(long id) {
+    public int delete(Long id) {
         return sysLoginLogMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public SysLoginLog findById(long id) {
+    public SysLoginLog findById(Long id) {
         return sysLoginLogMapper.selectByPrimaryKey(id).get();
     }
 

@@ -35,12 +35,12 @@ public class SysLogServiceImpl implements SysLogService {
     }
 
     @Override
-    public int delete(long id) {
+    public int delete(Long id) {
         return sysLogMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public SysLog findById(long id) {
+    public SysLog findById(Long id) {
         return sysLogMapper.selectOne(c -> c.where(SysLogDynamicSqlSupport.id, isEqualTo(id))).get();
     }
 

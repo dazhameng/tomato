@@ -21,13 +21,13 @@ public interface CrudService<T> {
      * Delete
      * @param id
      */
-    int delete(long id);
+    int delete(Long id);
 
     /**
      * findById
      * @param id
      */
-    T findById(long id);
+    T findById(Long id);
 
     /**
      * findPage

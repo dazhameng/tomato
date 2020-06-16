@@ -33,12 +33,12 @@ public class SysDictServiceImpl implements SysDictService {
     }
 
     @Override
-    public int delete(long id) {
+    public int delete(Long id) {
         return sysDictMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public SysDict findById(long id) {
+    public SysDict findById(Long id) {
         return sysDictMapper.selectByPrimaryKey(id).get();
     }
 
