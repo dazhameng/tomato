@@ -3,6 +3,7 @@ package com.dzm.tomato.admin.serviceImpl;
 import com.dzm.tomato.admin.dao.SysDeptMapper;
 import com.dzm.tomato.admin.model.SysDept;
 import com.dzm.tomato.admin.service.SysDeptService;
+import com.dzm.tomato.core.page.MybatisPageHelper;
 import com.dzm.tomato.core.page.PageRequest;
 import com.dzm.tomato.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,11 +89,6 @@ public class SysDeptServiceImpl implements SysDeptService {
 
     @Override
     public PageResult findPage(PageRequest pageRequest) {
-//        int offset = (page.getPageNumber() - 1) * page.getPageSize();
-//        List<SysDept> list = sysDeptMapper.select(c -> c.limit(offset).offset(offset));
-//        PageResult<SysDept> pageResult = new PageResult<SysDept>();
-//        pageResult.addAll(list);
-//        return pageResult;
-        return null;
+        return MybatisPageHelper.findPage(pageRequest,sysDeptMapper);
     }
 }
