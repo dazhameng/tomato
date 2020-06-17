@@ -20,12 +20,12 @@ public class SysUserController {
 	
 	@GetMapping(value="/findAll")
 	public Object findAll() {
-		return sysUserServiceImpl.findAll();
+		return HttpResult.ok(sysUserServiceImpl.findAll());
 	}
 	
 	@GetMapping(value="/{id}")
 	public Object findById(@PathVariable long id) {
-		return sysUserServiceImpl.findById(id);
+		return HttpResult.ok(sysUserServiceImpl.findById(id));
 	}
 
 	@GetMapping(value="page/{pageNumber}/{pageSize}")
@@ -33,6 +33,6 @@ public class SysUserController {
 		PageRequest pageRequest = new PageRequest(pageNumber, pageSize);
 		PageResult pageResult = sysUserServiceImpl.findPage(pageRequest);
 //		return HttpResult.ok(pageRequest);
-		return pageResult;
+		return HttpResult.ok(pageResult);
 	}
 }
