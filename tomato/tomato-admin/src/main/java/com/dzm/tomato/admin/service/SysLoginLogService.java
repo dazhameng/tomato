@@ -12,4 +12,12 @@ public interface SysLoginLogService extends CrudService<SysLoginLog> {
      * @return
      */
     public int delete(List<Long> ids);
+
+    /**
+     * 记录登录日志
+     * @param userName
+     * @param ip
+     * @return
+     */
+    int writeLoginLog(String userName, String ip);
 }

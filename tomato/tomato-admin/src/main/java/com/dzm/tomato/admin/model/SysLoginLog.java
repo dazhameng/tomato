@@ -5,6 +5,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SysLoginLog implements Serializable {
+
+    /**
+     * Custom STATUS
+     */
+    public static final String STATUS_LOGIN = "login";
+    public static final String STATUS_LOGOUT = "logout";
+    public static final String STATUS_ONLINE = "online";
+
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2020-06-14T02:28:10.481107+09:00", comments="Source field: sys_login_log.id")
     private Long id;
 

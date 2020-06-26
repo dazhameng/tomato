@@ -1,12 +1,16 @@
 package com.dzm.tomato.admin.serviceImpl;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import cn.hutool.core.util.StrUtil;
 import com.dzm.tomato.admin.dao.*;
 import com.dzm.tomato.admin.model.SysMenu;
 import com.dzm.tomato.admin.model.SysRole;
 import com.dzm.tomato.admin.model.SysUserRole;
+import com.dzm.tomato.admin.service.SysRoleService;
 import com.dzm.tomato.core.page.MybatisPageHelper;
 import com.dzm.tomato.core.page.PageRequest;
 import com.dzm.tomato.core.page.PageResult;
@@ -31,6 +35,9 @@ public class SysUserServiceImpl implements SysUserService{
 
 	@Autowired
 	private SysRoleMapper sysRoleMapper;
+
+	@Autowired
+	private SysRoleService sysRoleService;
 
 	@Override
 	public List<SysUser> findAll() {
@@ -91,9 +98,18 @@ public class SysUserServiceImpl implements SysUserService{
 		for (SysUserRole sysUserRole: sysUserRoles){
 			sysRoles.add(sysRoleMapper.selectByPrimaryKey(sysUserRole.getRoleId()).get());
 		}
-		List<SysMenu> sysMenus = new ArrayList<SysMenu>();
-		// to do
-		return null;
+		List<SysMenu> sysMenus = new ArrayList<>();
+		for (SysRole sysRole: sysRoles){
+			sysMenus.addAll(sysRoleService.findRoleMenus(sysRole.getId()));
+		}
+		Set<String> result = new HashSet<>();
+		for (SysMenu sysMenu: sysMenus){
+			String tempPerms = sysMenu.getPerms();
+			if(!StrUtil.isEmpty(tempPerms)){
+				result.add(tempPerms);
+			}
+		}
+		return result;
 	}
 
 	@Override

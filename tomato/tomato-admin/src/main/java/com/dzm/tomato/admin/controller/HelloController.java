@@ -1,6 +1,7 @@
 package com.dzm.tomato.admin.controller;
 
 import cn.hutool.core.util.StrUtil;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,4 +19,11 @@ public class HelloController {
 		String template = "Hello {}!";
 		return StrUtil.format(template, name);
 	}
+
+	@GetMapping(value="/test")
+	@PreAuthorize("hasAuthority('sys:test:view')")
+	public String test(){
+		return "test";
+	}
+
 }
