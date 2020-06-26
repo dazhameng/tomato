@@ -1,5 +1,6 @@
 package com.dzm.tomato.admin.controller;
 
+import com.dzm.tomato.admin.service.SysUserService;
 import com.dzm.tomato.core.http.HttpResult;
 import com.dzm.tomato.core.page.PageRequest;
 import com.dzm.tomato.core.page.PageResult;
@@ -16,22 +17,22 @@ import com.dzm.tomato.admin.serviceImpl.SysUserServiceImpl;
 public class SysUserController {
 	
 	@Autowired
-	private SysUserServiceImpl sysUserServiceImpl;
+	private SysUserService sysUserService;
 	
 	@GetMapping(value="/findAll")
 	public Object findAll() {
-		return HttpResult.ok(sysUserServiceImpl.findAll());
+		return HttpResult.ok(sysUserService.findAll());
 	}
 	
 	@GetMapping(value="/{id}")
 	public Object findById(@PathVariable long id) {
-		return HttpResult.ok(sysUserServiceImpl.findById(id));
+		return HttpResult.ok(sysUserService.findById(id));
 	}
 
 	@GetMapping(value="page/{pageNumber}/{pageSize}")
 	public Object findPage(@PathVariable int pageNumber, @PathVariable int pageSize){
 		PageRequest pageRequest = new PageRequest(pageNumber, pageSize);
-		PageResult pageResult = sysUserServiceImpl.findPage(pageRequest);
+		PageResult pageResult = sysUserService.findPage(pageRequest);
 //		return HttpResult.ok(pageRequest);
 		return HttpResult.ok(pageResult);
 	}
