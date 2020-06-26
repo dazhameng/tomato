@@ -1,5 +1,6 @@
 package com.dzm.tomato.admin.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -20,6 +21,8 @@ import java.util.List;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+
+	@Bean
 	public Docket createRestApi() {
 //		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
 		// 添加请求参数，我们这里把token作为请求头部参数传入后端
