@@ -47,7 +47,7 @@ public class SysUserServiceImpl implements SysUserService{
 //		RowBounds rowBounds = new RowBounds(1,5);
 //		List<SysUser> list  = sysUserMapper.select(c ->
 //				c.limit(2).offset(1));
-		List<SysUser> list = sysUserMapper.selectMany(null);
+		List<SysUser> list = sysUserMapper.select(c -> c);
 		return list;
 	}
 
